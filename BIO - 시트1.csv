@@ -1,0 +1,32 @@
+DOID,SUBCLASS,FULLNAME,query1,,,,,query2
+1612,BRCA,breast cancer,MATCH (d:Disease {identifier: 'DOID:1612'})-[r]->(g:Gene) RETURN g.name,,,,,MATCH (ee:Disease) where ee.identifier='DOID:1612' return ee;
+11054,BLCA ,BLCA: Bladder Urothelial Carcinoma,MATCH (d:Disease {identifier: 'DOID:11054'})-[r]->(g:Gene) RETURN g.name,,,,,MATCH (ee:Disease) where ee.identifier='DOID:11054' return ee;
+0060073,DLBC,,MATCH (d:Disease {identifier: 'DOID:0060073'})-[r]->(g:Gene) RETURN g.name,,,,,MATCH (ee:Disease) where ee.identifier='DOID:0060073' return ee;
+219,COAD,"colon cancer,license:",MATCH (d:Disease {identifier: 'DOID:219'})-[r]->(g:Gene) RETURN g.name,,,,,MATCH (ee:Disease) where ee.identifier='DOID:219' return ee;
+363,UCEC,uterine cancer,MATCH (d:Disease {identifier: 'DOID:363'})-[r]->(g:Gene) RETURN g.name,,,,,
+4362,CESC,cervical,MATCH (d:Disease {identifier: 'DOID:4362'})-[r]->(g:Gene) RETURN g.name,,,,,
+263,KIPAN,kidney,MATCH (d:Disease {identifier: 'DOID:263'})-[r]->(g:Gene) RETURN g.name,,,,,
+1115,SARC,Sarcoma,MATCH (d:Disease {identifier: 'DOID:1115'})-[r]->(g:Gene) RETURN g.name,,,,,
+4159,SKCM,Skin ,MATCH (d:Disease {identifier: 'DOID:4159'})-[r]->(g:Gene) RETURN g.name,,,,,
+784,KIRC,chronic kidney failure ,MATCH (d:Disease {identifier: 'DOID:784'})-[r]->(g:Gene) RETURN g.name,,,,,
+3070,GBMLGG,malignant glioma ,MATCH (d:Disease {identifier: 'DOID:3070'})-[r]->(g:Gene) RETURN g.name,,,,,
+1115,STES,sarcoma,MATCH (d:Disease {identifier: 'DOID:1115'})-[r]->(g:Gene) RETURN g.name,,,,,
+1781,THCA,Thyroid,MATCH (d:Disease {identifier: 'DOID:1781'})-[r]->(g:Gene) RETURN g.name,,,,,
+3571,LIHC,Liver,MATCH (d:Disease {identifier: 'DOID:3571'})-[r]->(g:Gene) RETURN g.name,,,,,
+11934,HNSC,head and Neck ,MATCH (d:Disease {identifier: 'DOID:11934'})-[r]->(g:Gene) RETURN g.name,,,,,
+1793,PAAD,pancreatic cancer,MATCH (d:Disease {identifier: 'DOID:1793'})-[r]->(g:Gene) RETURN g.name,,,,,
+2394,OV,Ovarian,MATCH (d:Disease {identifier: 'DOID:2394'})-[r]->(g:Gene) RETURN g.name,,,,,
+10283,PRAD,prostate,MATCH (d:Disease {identifier: 'DOID:10283'})-[r]->(g:Gene) RETURN g.name,,,,,
+2531,LAML,Hematologic,MATCH (d:Disease {identifier: 'DOID:2531'})-[r]->(g:Gene) RETURN g.name,,,,,
+3953,ACC,adrenal gland cancer ,MATCH (d:Disease {identifier: 'DOID:3953'})-[r]->(g:Gene) RETURN g.name,,,,,
+1319,LGG,Brain Cancer,MATCH (d:Disease {identifier: 'DOID:1319'})-[r]->(g:Gene) RETURN g.name,,,,,
+1324,LUSC,,MATCH (d:Disease {identifier: 'DOID:1324'})-[r]->(g:Gene) RETURN g.name,,,,,
+,LUAD,,,,,,,
+3953,PCPG,https://www.informatics.jax.org/disease/DOID:0050771,,,,,,
+3277,THYM,thymus,MATCH (d:Disease {identifier: 'DOID:3277'})-[r]->(g:Gene) RETURN g.name,,,,,
+2998,TGCT,testicular,MATCH (d:Disease {identifier: 'DOID:2998'})-[r]->(g:Gene) RETURN g.name,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+1459,hypothyroidism,,,,,,,MATCH (ee:Disease) where ee.identifier='DOID:1459' return ee;
