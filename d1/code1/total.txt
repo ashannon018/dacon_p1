@@ -1,0 +1,287 @@
+KIPAN
+VHL       154
+DST        27
+KMT2D      26
+MTOR       25
+PABPC1     24
+TP53       24
+PCLO       21
+RYR1       19
+
+SARC
+TP53     52
+ATRX     25
+PCLO     14
+RB1      13
+RYR1     10
+RYR2     10
+PEG3      9
+PKHD1     9
+
+SKCM
+BRAF      139
+PCLO      133
+MXRA5     105
+MYH1       91
+RYR1       90
+MYH4       90
+SCN10A     89
+MYH2       88
+
+KIRC
+VHL       151
+MTOR       19
+DST        19
+KMT2D      17
+PABPC1     16
+PTEN       12
+NOTCH2     12
+SYNE1      12
+
+LGG
+IDH1      180
+TP53      116
+ATRX       83
+NOTCH1     17
+PIK3CA     15
+NF1        12
+IDH2        9
+RYR2        8
+
+GBMLGG
+IDH1    189
+TP53    169
+ATRX     99
+PTEN     75
+EGFR     67
+NF1      36
+PCLO     34
+RYR2     33
+
+STES
+TP53     214
+SYNE1    116
+PCLO      91
+RYR2      88
+SPTA1     79
+KMT2D     73
+RYR1      63
+DMD       60
+
+BRCA
+PIK3CA    250
+TP53      218
+CDH1       73
+GATA3      58
+MAP3K1     56
+RYR2       52
+SYNE1      46
+DMD        34
+
+THCA
+BRAF       186
+HRAS        12
+TG          12
+RYR1         6
+CDH8         5
+DLC1         5
+SLC12A4      5
+COL5A3       5
+
+LIHC
+TP53      41
+CTNNB1    38
+RYR2      26
+DST       19
+PCLO      18
+DMD       16
+SPTA1     15
+SYNE1     14
+
+HNSC
+TP53      147
+CDKN2A     48
+PIK3CA     47
+SYNE1      43
+NOTCH1     42
+KMT2D      40
+PCLO       40
+RYR2       33
+
+PAAD
+TP53       79
+CDKN2A     19
+RYR1       12
+GNAS        9
+PLEC        9
+CACNA1B     8
+AMOT        8
+SPTA1       8
+
+OV
+TP53      190
+RYR2       13
+COL6A3     11
+RYR1       10
+EGFR       10
+DST        10
+AHNAK      10
+NF1        10
+
+PRAD
+SPOP      28
+TP53      14
+SPTA1     11
+SYNE1     10
+KMT2D      9
+CTNNB1     7
+AHNAK      7
+PCLO       7
+
+UCEC
+PTEN      122
+PIK3CA     97
+CTNNB1     61
+TP53       50
+RYR2       37
+CTCF       36
+RYR1       35
+DST        35
+
+LAML
+NPM1      41
+IDH1      18
+IDH2      17
+RUNX1     12
+TP53      11
+CEBPA     10
+PTPN11     8
+SMC1A      6
+
+COAD
+APC       160
+TP53      115
+SYNE1      62
+FBXW7      37
+DMD        35
+PIK3CA     34
+RYR1       32
+RYR2       32
+
+ACC
+PLEC      38
+LRIG1     25
+SOWAHC    24
+CMPK2     20
+NFKB2     18
+TM7SF2    16
+MEFV      16
+PTGIR     16
+
+LUSC
+TP53       127
+RYR2        76
+SYNE1       61
+SPTA1       49
+PKHD1       41
+COL11A1     35
+KMT2D       35
+PCLO        34
+
+LUAD
+TP53     77
+RYR2     72
+SPTA1    48
+PCLO     42
+RYR1     35
+DMD      33
+PTPRD    33
+RELN     32
+
+CESC
+PIK3CA    35
+SYNE1     24
+DST       23
+RYR2      22
+PLEC      17
+KMT2D     17
+PKD1      16
+DMD       15
+
+PCPG
+HRAS       15
+NF1        10
+CHEK2       8
+COL12A1     5
+ATRX        5
+RET         4
+AHNAK       4
+CDC27       4
+
+THYM
+HRAS      8
+TP53      4
+PCLO      3
+PLXNB2    3
+NF1       3
+AXL       2
+CHEK2     2
+CLIP1     2
+
+BLCA
+TP53      55
+KMT2D     31
+PIK3CA    23
+SYNE1     22
+SPTAN1    19
+RYR2      17
+ERCC2     17
+AHNAK     16
+
+TGCT
+KIT       19
+NCOR2     13
+CELSR1    12
+PLEC      10
+PKD1       9
+CDC27      8
+RYR1       7
+BMP2K      7
+
+DLBC
+KMT2D    15
+BTG2     12
+SYNE1    10
+BTG1     10
+DST       9
+PIM1      9
+PCLO      7
+KALRN     7
+
+	disease	counts
+0	BRCA	786
+1	KIPAN	515
+2	GBMLGG	461
+3	STES	379
+4	KIRC	334
+5	THCA	324
+6	SKCM	276
+7	PRAD	266
+8	OV	253
+9	LGG	229
+10	HNSC	223
+11	COAD	223
+12	UCEC	198
+13	SARC	198
+14	LUAD	184
+15	LUSC	178
+16	LIHC	158
+17	LAML	158
+18	CESC	155
+19	PCPG	147
+20	TGCT	124
+21	PAAD	120
+22	BLCA	104
+23	THYM	98
+24	ACC	72
+25	DLBC	38
