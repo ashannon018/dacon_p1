@@ -120,3 +120,60 @@ for test_file in os.listdir('/kaggle/input/waterpump-anomaly/test/D'):
         test_features = scaler.transform(test_data[feature_columns].values)
         predictions = model.predict(test_features.reshape(-1, 1, test_features.shape[1]))
         save_predictions(predictions, test_file.replace('.csv', ''), submission_file)
+
+
+###Parrarel###
+from concurrent.futures import ProcessPoolExecutor
+import tensorflow as tf
+
+# Parallel test data processing
+def process_test_file_parallel(file_path, scaler, feature_dim):
+    test_data = pd.read_csv(file_path)
+    test_data['timestamp'] = test_data['timestamp'].str.extract(r'T-(\\d+)', expand=False).fillna(0).astype(int) * -1
+    test_data['timestamp'] = pd.to_datetime(test_data['timestamp'], unit='m', origin='unix', errors='coerce').fillna(pd.Timestamp(0))
+    test_data = transform_timestamp(test_data)
+
+    padded_features = np.zeros((test_data.shape[0], feature_dim))
+    padded_features[:, :test_data.shape[1]] = test_data.values
+    padded_features = scaler.transform(padded_features)
+    return np.expand_dims(padded_features, axis=1), file_path
+
+def predict_test_batch(file_paths, model, scaler, feature_dim):
+    features = []
+    ids = []
+    for file_path in file_paths:
+        test_features, file_id = process_test_file_parallel(file_path, scaler, feature_dim)
+        features.append(test_features)
+        ids.append(file_id)
+
+    features = np.concatenate(features, axis=0)
+    predictions = model.predict(features)
+    return [(os.path.basename(file).replace('.csv', ''), pred.tolist()) for file, pred in zip(ids, predictions)]
+
+def predict_test_data_parallel(test_dir, model, scaler, feature_dim, batch_size=16):
+    file_paths = [
+        os.path.join(root, file)
+        for root, _, files in os.walk(test_dir)
+        for file in files if file.endswith('.csv')
+    ]
+
+    predictions = []
+    with ProcessPoolExecutor() as executor:
+        for i in range(0, len(file_paths), batch_size):
+            batch_files = file_paths[i:i + batch_size]
+            batch_preds = predict_test_batch(batch_files, model, scaler, feature_dim)
+            predictions.extend(batch_preds)
+
+    return predictions
+
+# Predict for C and D in parallel
+predictions_c = predict_test_data_parallel('/kaggle/input/water-pump-pressure-anomaly-detection/test/C', model_a, scaler_a, feature_dim_a)
+predictions_d = predict_test_data_parallel('/kaggle/input/water-pump-pressure-anomaly-detection/test/D', model_a, scaler_a, feature_dim_a)
+
+# Save results
+all_predictions = predictions_c + predictions_d
+submission = pd.DataFrame({
+    'ID': [pred[0] for pred in all_predictions],
+    'flag_list': [str(pred[1]) for pred in all_predictions]
+})
+submission.to_csv('Submission_model_a.csv', index=False)
